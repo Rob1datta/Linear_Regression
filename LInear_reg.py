@@ -12,7 +12,7 @@ class Linear1D:
         X=[]
         Y=[]
         # Reading the csv data
-        for line in open("/home/myboxuser/Downloads/Data/data_1d.csv"):
+        for line in open("Provide your data path make sure it is progrssive data"):
             x,y=line.split(',')
             #print x,y
             X.append(float(x))
@@ -37,7 +37,7 @@ class Linear1D:
         X=[]
         Y=[]
         non_decimal=re.compile(r'[^\d]+')
-        for line in open('/home/myboxuser/Downloads/Data/moore.csv'):
+        for line in open('Get a transistors data and paste the path'):
             r=line.split('\t')
             x = int(non_decimal.sub('', r[2].split('[')[0]))
             y = int(non_decimal.sub('', r[1].split('[')[0]))
@@ -63,21 +63,6 @@ class Linear1D:
 
         time_to_double=np.log(2.03)/aslope
         print "The predicted year to double is ",time_to_double
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 make=Linear1D()
 make.Moorelaw()
